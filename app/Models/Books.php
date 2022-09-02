@@ -12,4 +12,9 @@ class Books extends Model
     protected $table = "books";
 
     protected $guarded = [];
+
+    public function author(){
+        return $this->belongsTo(Authors::class, 'auhtor_id', 'id');
+    }
+    
 }
